@@ -5,6 +5,4 @@ class Store < ActiveRecord::Base
   only_integer: true,
   greater_than: 0
   }
-    # validates_associated :employees
-
 end

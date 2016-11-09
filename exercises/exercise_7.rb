@@ -11,4 +11,14 @@ puts "----------"
 
 # Your code goes here ...
 
+store = Store.create(name: "Victoria")
 
+if store.valid?
+  puts "Thanks for the #{store.name} Store Location!"
+  @current_store = store
+else
+  puts "Error!"
+  store.errors.full_messages.each do |msg|
+    puts msg
+  end
+end
